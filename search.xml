@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Next主题设置Canvas Nest效果</title>
+    <url>/2021/07/12/CanvasNest/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p>Nest主题设置动画效果</p>
+
+</blockquote>
+
+<span id="more"></span>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><h3 id="Step-1-rarr-进入Hexo文件夹"><a href="#Step-1-rarr-进入Hexo文件夹" class="headerlink" title="Step 1 &rarr; 进入Hexo文件夹"></a>Step 1 &rarr; 进入Hexo文件夹</h3><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> hexo</span><br><span class="line">$ ls</span><br><span class="line">scaffolds  <span class="built_in">source</span>  themes  _config.yml  package.json</span><br></pre></td></tr></table></figure>
+
+<h3 id="Step-2-rarr-创建-footer-swig"><a href="#Step-2-rarr-创建-footer-swig" class="headerlink" title="Step 2 &rarr; 创建 footer.swig"></a>Step 2 &rarr; 创建 <code>footer.swig</code></h3><p>在 <code>hexo/source/_data</code> (_data不存在则创建)下创建<code>footer.swig</code></p>
+<p>内容如下</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">color</span>=<span class="string">&quot;0,0,255&quot;</span> <span class="attr">opacity</span>=<span class="string">&quot;0.5&quot;</span> <span class="attr">zIndex</span>=<span class="string">&quot;-1&quot;</span> <span class="attr">count</span>=<span class="string">&quot;99&quot;</span> <span class="attr">src</span>=<span class="string">&quot;https://cdn.jsdelivr.net/npm/canvas-nest.js@1/dist/canvas-nest.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Step-3-rarr-修改主题配置"><a href="#Step-3-rarr-修改主题配置" class="headerlink" title="Step 3 &rarr; 修改主题配置"></a>Step 3 &rarr; 修改主题配置</h3><p>修改Next主题配置 <code>_config.yml</code>，如下</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Define custom file paths.</span></span><br><span class="line"><span class="comment"># Create your custom files in site directory `source/_data` and uncomment needed files below.</span></span><br><span class="line"><span class="attr">custom_file_path:</span></span><br><span class="line">  <span class="comment">#head: source/_data/head.swig</span></span><br><span class="line">  <span class="comment">#header: source/_data/header.swig</span></span><br><span class="line">  <span class="comment">#sidebar: source/_data/sidebar.swig</span></span><br><span class="line">  <span class="comment">#postMeta: source/_data/post-meta.swig</span></span><br><span class="line">  <span class="comment">#postBodyEnd: source/_data/post-body-end.swig</span></span><br><span class="line">  <span class="attr">footer:</span> <span class="string">source/_data/footer.swig</span></span><br><span class="line">  <span class="comment">#bodyEnd: source/_data/body-end.swig</span></span><br><span class="line">  <span class="comment">#variable: source/_data/variables.styl</span></span><br><span class="line">  <span class="comment">#mixin: source/_data/mixins.styl</span></span><br><span class="line">  <span class="comment">#style: source/_data/styles.styl</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Next主题下设置首页文章摘要</title>
+    <url>/2021/07/12/Excerpt/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p>设置摘要令主页更加美观</p>
+
+</blockquote>
+
+<span id="more"></span>
+
+<h1 id="配置设置"><a href="#配置设置" class="headerlink" title="配置设置"></a>配置设置</h1><h2 id="修改主题配置"><a href="#修改主题配置" class="headerlink" title="修改主题配置"></a>修改主题配置</h2><p>在Next主题的配置文件_config.yml中开启摘要简述功能（默认打开）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Automatically excerpt description in homepage as preamble text.</span><br><span class="line">excerpt_description: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="为文章描写概述"><a href="#为文章描写概述" class="headerlink" title="为文章描写概述"></a>为文章描写概述</h2><p>在文章头部中添加<code>description:</code>，并在之后（注意添加空格）描写文章摘要保存即可，如下</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: 令Next主题首页显示文章摘要</span><br><span class="line">data:</span><br><span class="line">description: 修改主题配置，为文章描写概述，将概述描写添加到模版</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>效果如本文所示</p>
+<h2 id="将概述描写添加到模版"><a href="#将概述描写添加到模版" class="headerlink" title="将概述描写添加到模版"></a>将概述描写添加到模版</h2><p>为了方便书写可以将<code>description:</code>添加到scaffolds/post.md中，如下</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">description:</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>之后进行文章书写时，会自动添加<code>description:</code></p>
+<h1 id="插件设置"><a href="#插件设置" class="headerlink" title="插件设置"></a>插件设置</h1><p>安装以下插件后</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install theme-next/hexo-next-tag</span><br></pre></td></tr></table></figure>
+
+<p>文章开头输入</p>
+<blockquote class="blockquote-center">
+<p>摘要内容</p>
+
+</blockquote>
+
+<p>并用</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
+
+<p>进行截断即可(记得开启摘要简述功能)</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>配置</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Next主题下添加文章版权信息</title>
+    <url>/2021/07/12/Setcopyright/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p>修改主题配置添加版权信息</p>
+
+</blockquote>
+
+<span id="more"></span>
+
+<p>新版Next主题文章末添加版权信息，看了网上许多教程，大部分都是修改<code>post_copyright</code>，但本人用的主题配置文件下，并无该配置项目，故自己摸索出来了配置方法</p>
+<h2 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h2><p>修改主题配置文件<code>_config.yml</code>，如下</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">creative_commons:</span></span><br><span class="line">  <span class="attr">license:</span> <span class="string">by-nc-sa</span></span><br><span class="line">  <span class="attr">sidebar:</span> <span class="literal">true</span> <span class="comment">#false</span></span><br><span class="line">  <span class="attr">post:</span> <span class="literal">true</span> <span class="comment">#false</span></span><br><span class="line">  <span class="attr">language:</span></span><br></pre></td></tr></table></figure>
+
+<p> 效果如本文所示</p>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>配置</tag>
+      </tags>
+  </entry>
+</search>
