@@ -92,4 +92,31 @@
         <tag>配置</tag>
       </tags>
   </entry>
+  <entry>
+    <title>CSteamserver</title>
+    <url>/2021/07/19/CSteamserver/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p>CobaltStrike4.0服务器相关配置</p>
+
+</blockquote>
+
+<span id="more"></span>
+
+<h2 id="配置java环境"><a href="#配置java环境" class="headerlink" title="配置java环境"></a>配置java环境</h2><p>服务器的运行需要配置java环境，具体可以参考本人博客园的配置</p>
+<h2 id="上传CobaltStrike4-0文件夹"><a href="#上传CobaltStrike4-0文件夹" class="headerlink" title="上传CobaltStrike4.0文件夹"></a>上传CobaltStrike4.0文件夹</h2><p>利用Xftp上传文件夹，并赋予权限</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">chmod +x teamserver</span><br></pre></td></tr></table></figure>
+
+<p>运行teamserver</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">./teamserver 服务器IP 登陆密码</span><br></pre></td></tr></table></figure>
+
+<h2 id="使用screen令teamserver常驻"><a href="#使用screen令teamserver常驻" class="headerlink" title="使用screen令teamserver常驻"></a>使用screen令teamserver常驻</h2><h2 id="客户端连接"><a href="#客户端连接" class="headerlink" title="客户端连接"></a>客户端连接</h2><p>运行cs.bat即可</p>
+]]></content>
+      <categories>
+        <category>CobaltStrike</category>
+        <category>4.0版本</category>
+      </categories>
+      <tags>
+        <tag>配置</tag>
+      </tags>
+  </entry>
 </search>
