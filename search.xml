@@ -373,6 +373,11 @@
 <p>count() 用法示例：</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">nums = [<span class="number">40</span>, <span class="number">36</span>, <span class="number">89</span>, <span class="number">2</span>, <span class="number">36</span>, <span class="number">100</span>, <span class="number">7</span>, -<span class="number">20.5</span>, <span class="number">36</span>]</span><br><span class="line"><span class="comment">#统计元素出现的次数</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;36出现了%d次&quot;</span> % nums.count(<span class="number">36</span>))</span><br><span class="line"><span class="comment">#判断一个元素是否存在</span></span><br><span class="line"><span class="keyword">if</span> nums.count(<span class="number">100</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;列表中存在100这个元素&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;列表中不存在100这个元素&quot;</span>)</span><br></pre></td></tr></table></figure>
 
+
+
+<blockquote>
+<p><a href="http://c.biancheng.net/python/list_tuple_dict/">来源C语言中文网</a></p>
+</blockquote>
 ]]></content>
       <categories>
         <category>Python</category>
